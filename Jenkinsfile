@@ -11,7 +11,7 @@ pipeline {
 
         stage('Build docker image') {
             steps {  
-                sh 'docker build -t mhunn/buildtest:1.0.0'
+                sh 'docker build -t mhunn/buildtest:1.0.0 .'
             }
         }
     
