@@ -3,12 +3,6 @@ pipeline {
     
     stages {
         
-        stage('git') {
-            steps{
-            git 'https://github.com/TDiazSouble/trivy-scan'
-            }
-        }
-
         stage('Build docker image') {
             steps {  
                 sh 'docker build -t mhunn/buildtest:1.0.0 .'
