@@ -29,7 +29,7 @@ pipeline {
                 ]   
 
                 // Scan again and fail on CRITICAL vulns
-                sh 'trivy filesystem --ignore-unfixed --vuln-type os,library --exit-code 1 --severity CRITICAL ./nodejs'
+                sh 'trivy fs --ignore-unfixed --vuln-type os,library --exit-code 1 --severity CRITICAL .'
 
             }
         }
